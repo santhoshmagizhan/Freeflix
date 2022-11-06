@@ -1,0 +1,119 @@
+<!-- header -->
+<mat-toolbar>
+  <button #ffmenutoggle mat-icon-button class="ffmenubtn" (click)="snav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span><img src="../../assets/freeflix-logo_low.png" alt="logo" class="fflogo"></span>
+  <span class="header-spacer"></span>
+
+  <button mat-icon-button class="fftop-search" (click) = "search()">
+    <mat-icon >search</mat-icon>
+  </button>
+</mat-toolbar>
+
+<!-- sidenav with body content  -->
+<mat-sidenav-container class="ff-sidenav-container"
+                         [style.marginTop.px]="0">
+    <mat-sidenav #snav mode="over">
+      <mat-nav-list>
+      <mat-list-item>
+
+        </mat-list-item>
+        <mat-list-item style="padding-top: 20px ; padding-bottom: 100px;">
+          <div class ="container-fluid sidemenutext active" style="display: inline-flex;">
+            <div class="col-3 col-sm-3 col-md-3 col-lg-3 content-center">
+            <mat-icon class="iconconfig">person</mat-icon></div>
+            <div class="col-9 col-sm-9 col-md-9 col-lg-9 content-center">
+              <div class="wrapper">
+              <span class="text-with-dots">
+              Santhosh Ravichandran <br/>
+              <span class="ffminion">
+              +91 9629987905
+              </span>
+              </span>
+              </div>
+            </div></div>
+            <hr>
+        </mat-list-item>
+      <mat-list-item (click)="menuOnSelection('home','sidenav')">
+        <div [class] ="'container-fluid sidemenutext ' + footermenu.home" style="display: inline-flex;">
+          <div class="col-3 col-sm-3 col-md-3 col-lg-3 content-center" >
+            <mat-icon class="iconconfig">home</mat-icon></div>
+          <div class="col-6 col-sm-6 col-md-6 col-lg-6 content-center">
+            <span>Home</span>
+          </div></div>
+          </mat-list-item>
+      <mat-list-item (click)="menuOnSelection('movies','sidenav')">
+        <div [class] ="'container-fluid sidemenutext ' + footermenu.movies" style="display: inline-flex;">
+          <div class="col-3 col-sm-3 col-md-3 col-lg-3 content-center">
+            <mat-icon class="iconconfig">movie</mat-icon></div>
+          <div class="col-6 col-sm-6 col-md-6 col-lg-6 content-center">
+            <span>Movies</span>
+          </div></div>
+         </mat-list-item>
+      <mat-list-item (click)="menuOnSelection('series','sidenav')">
+        <div [class] ="'container-fluid sidemenutext ' + footermenu.series" style="display: inline-flex;">
+          <div class="col-3 col-sm-3 col-md-3 col-lg-3 content-center">
+            <mat-icon class="iconconfig">local_movies</mat-icon></div>
+          <div class="col-6 col-sm-6 col-md-6 col-lg-6 content-center">
+            <span>Series</span>
+          </div></div>
+          </mat-list-item>
+      <mat-list-item>
+        <div class ="container-fluid sidemenutext" style="display: inline-flex;">
+          <div class="col-3 col-sm-3 col-md-3 col-lg-3 content-center">
+            <mat-icon class="iconconfig">exit_to_app</mat-icon></div>
+          <div class="col-6 col-sm-6 col-md-6 col-lg-6 content-center">
+            <span>Logout</span>
+          </div></div>
+          </mat-list-item>
+
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <!-- sidenav body content -->
+    <mat-sidenav-content>
+      <div class ="container-fluid">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 content-center">
+      <app-all-list></app-all-list>
+      <div class="listmovies">
+      <app-movie-list caption ="Recently Viewed"></app-movie-list>
+      <app-movie-list caption = "Tamil Movies"></app-movie-list>
+      <app-movie-list caption = "Tamil Dubbed Movies"></app-movie-list>
+      <app-movie-list caption = "English Movies"></app-movie-list>
+      <app-movie-list caption = "Series"></app-movie-list>
+      </div>
+      </div>
+
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+
+<!-- Footer -->
+<footer>
+  <div class ="container-fluid footer-container">
+   <div class="col-3 col-sm-3 col-md-3 col-lg-3 content-center">
+     <button mat-button [class] = "'btnmenu '+ footermenu.home" (click)="menuOnSelection('home','footer')">
+       <mat-icon class="iconconfig">home</mat-icon> <span class="menutext">Home</span>
+     </button>
+   </div>
+   <div class="col-3 col-sm-3 col-md-3 col-lg-3 content-center">
+     <button mat-button [class] = "'btnmenu '+ footermenu.movies" (click)="menuOnSelection('movies','footer')">
+       <mat-icon class="iconconfig">movie</mat-icon> <span class="menutext">Movies</span>
+     </button>
+   </div>
+   <div class="col-3 col-sm-3 col-md-3 col-lg-3 content-center">
+     <button mat-button [class] = "'btnmenu '+ footermenu.series" (click)="menuOnSelection('series','footer')">
+       <mat-icon class="iconconfig">local_movies</mat-icon> <span class="menutext">Series</span>
+     </button>
+   </div>
+   <div class="col-3 col-sm-3 col-md-3 col-lg-3 content-center">
+     <button mat-button [class] = "'btnmenu '+ footermenu.search" (click) = "search()">
+       <mat-icon class="iconconfig">search</mat-icon> <span class="menutext">Search</span>
+     </button>
+   </div>
+  </div>
+
+ </footer>
+

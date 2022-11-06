@@ -1,0 +1,26 @@
+
+<div class="moviemaincontent">
+  <div class="ffmenutitle">
+    <span>{{caption}}<button mat-button class = "btnmenu viewmore">
+      <span class="menutext">View More </span><mat-icon class="iconconfig">keyboard_arrow_right</mat-icon>
+    </button></span>
+  </div>
+<swiper [slidesPerView]="2.5"  [loop]="true" [autoHeight]="true" [allowTouchMove]="true"
+ [navigation]="true">
+<ng-template   swiperSlide>
+  <img  loading="lazy" src="https://image-resizer-cloud-api.akamaized.net/image/E320EBF0-077B-449C-B4B8-807BFF9584D2/0-3x1.jpg?width=2049">
+</ng-template>
+
+<ng-template    swiperSlide>
+  <img loading="lazy" src="https://image-resizer-cloud-api.akamaized.net/image/75980281-A53F-4E04-BCF0-52835AE8B565/0-3x1.jpg?width=2049">
+</ng-template>
+
+<ng-template   swiperSlide>
+  <img loading="lazy" src="https://image-resizer-cloud-api.akamaized.net/image/380773BB-B3ED-418C-806D-C66186F7B927/0-3x1.jpg?width=2049">
+</ng-template>
+<ng-template   swiperSlide>
+  <img loading="lazy" src="https://image-resizer-cloud-api.akamaized.net/image/6349CB61-80AA-4B9F-9954-0A5C7A87B6D1/0-3x1.jpg?width=2049">
+</ng-template>
+
+</swiper>
+</div>

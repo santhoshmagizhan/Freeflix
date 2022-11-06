@@ -1,0 +1,204 @@
+@import '../app.component.scss';
+
+.ff-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.mat-drawer-content {
+  background-color: $bg-Color;
+}
+
+.mat-sidenav{
+ width: 20%;
+ background-color: $panel-color;
+ position: fixed;
+}
+
+.ff-is-mobile .ff-toolbar {
+  position: absolute;
+  z-index: 999;
+}
+
+h1.ff-app-name {
+  margin-left: 8px;
+}
+
+.ff-sidenav-container {
+  flex: 1;
+}
+
+.ff-is-mobile .ff-sidenav-container {
+  flex: 1 0 auto;
+}
+
+.sidemenutext {
+ font-size: 1rem;
+ color: $disable-color;
+
+}
+.wrapper {
+  display: flex;
+  align-self: center;
+}
+
+.text-with-dots {
+  display: block;
+  max-width: 98%;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  padding-top: 2px;
+
+}
+
+footer{
+  display:inline-block;
+  position: fixed;
+  z-index: 9999;
+  left:0px;
+  bottom: 0px;
+  width: 100%;
+  background-color: $panel-color;
+  color:$disable-color;
+  height:60px;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  .footer-container{
+    display:inline-flex;
+    overflow: hidden;
+  }
+  .content-center{
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    align-content: center;
+  }
+
+}
+.btnmenu{
+  font-size: 1rem !important;
+  line-height: 20px !important;
+}
+
+.iconconfig{
+  font-size: 1.5rem !important;
+  vertical-align: middle;
+}
+.menutext{
+  display: block;
+}
+
+.active{
+  color:$Secondary-Color !important;
+}
+
+.header-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar{
+  background-color: $panel-color;
+  color: $Secondary-Color;
+  overflow: hidden;
+  position: fixed;
+  z-index: 999;
+}
+.fflogo{
+  width:80%;
+  height: 21px;
+}
+.listmovies{
+  padding-bottom: 6rem;
+}
+.btnmenu{
+  border-radius: 25px;
+}
+
+
+
+@media only screen and (min-width: 100px) and (max-width:800px){
+  footer{
+    display: block;
+  }
+  .mat-sidenav{
+    width: 60%;
+   }
+   .sidemenutext {
+    font-size: 1rem;
+   }
+   .ffminion{
+    font-size: 0.8rem;
+   }
+   .fftop-search{
+    display: none;
+   }
+}
+
+@media only screen and (min-width: 801px) and (max-width:1919px){
+  footer{
+    display: none;
+  }
+  .mat-sidenav{
+    width: 30%;
+   }
+   .sidemenutext {
+    font-size: 1rem;
+   }
+   .ffminion{
+    font-size: 0.8rem;
+   }
+
+   .fftop-search{
+    display: block;
+   }
+}
+
+@media only screen and (min-width: 1920px){
+  .fflogo{
+    width:100%;
+    height: 30px;
+  }
+  .ffmenubtn , .fftop-search{
+    width:80px;
+    height:80px;
+
+    mat-icon{
+    width: 100%;
+    font-size: 3rem;
+    overflow:visible;
+    }
+  }
+
+  footer{
+    display: none;
+  }
+  .mat-sidenav{
+    width: 30%;
+
+   }
+   .sidemenutext {
+    font-size: 2rem !important;
+
+    .mat-icon{
+      height:41px;
+      width: 40px;
+    }
+
+    .iconconfig{
+      font-size: 2rem !important;
+    }
+   }
+   .ffminion{
+    font-size: 1rem;
+   }
+   .fftop-search{
+    display: block;
+   }
+}
